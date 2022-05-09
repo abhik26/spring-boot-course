@@ -1,4 +1,4 @@
-package com.example.springboot.rest;
+package com.example.springboot.controller.rest;
 
 import java.time.LocalDateTime;
 
@@ -17,7 +17,7 @@ public class FunRestController {
 		this.coachName = coachName;
 	}
 
-	@GetMapping("/")
+	@GetMapping("/hello-world")
 	public String sayHello() {
 		return "Hello World! Time on server is: " + LocalDateTime.now();
 	}

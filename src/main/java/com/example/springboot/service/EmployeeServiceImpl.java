@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.example.springboot.dao.EmployeeRepository;
 import com.example.springboot.entity.Employee;
@@ -84,6 +83,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 			return false;
 		}
 		return true;
+	}
+	
+	@Override
+	public List<Employee> findAllByOrderByFirstNameAsc() {
+		return employeeRepository.findAllByOrderByFirstNameAsc();
 	}
 
 }

@@ -13,4 +13,6 @@ public interface EmployeeService {
 	long saveOrUpdate(Employee employee);
 	
 	boolean deleteById(long employeeId);
+	
+	List<Employee> findAllByOrderByFirstNameAsc();
 }
